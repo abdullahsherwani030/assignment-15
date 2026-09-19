@@ -1,0 +1,243 @@
+/* Base Reset & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* Reusable UI Components */
+.line {
+    height: 4px;
+    background-color: #ccc;
+    margin: 8px 0;
+    border-radius: 2px;
+}
+.short-line { width: 40%; }
+.long-line { width: 85%; }
+
+.placeholder-box {
+    border: 2px solid #aaa;
+    position: relative;
+    background: #fdfdfd;
+}
+/* Creates the wireframe 'X' design inside image boxes */
+.placeholder-box::before, .placeholder-box::after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top right, transparent calc(50% - 1px), #aaa, transparent calc(50% + 1px));
+}
+.placeholder-box::after {
+    background: linear-gradient(to top left, transparent calc(50% - 1px), #aaa, transparent calc(50% + 1px));
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid #ccc;
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.btn-contact {
+    border: 2px solid #333;
+    padding: 6px 16px;
+    transition: 0.2s;
+}
+.btn-contact:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 2px solid #ccc;
+}
+.hero-headline {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+.hero-subtext {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+.btn-primary {
+    border: 2px solid #333;
+    background: transparent;
+    padding: 10px 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-primary:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Our Services Section */
+.services-section {
+    padding: 40px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.service-card .placeholder-box {
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+/* Features / Split Content Section */
+.features-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 2px solid #ccc;
+}
+.feature-left, .feature-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+}
+.feature-left {
+    border-right: 2px solid #ccc;
+}
+.feature-text-block {
+    flex-grow: 1;
+}
+.small-box {
+    width: 120px;
+    height: 100px;
+    flex-shrink: 0;
+}
+.mini-box {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+/* About & Map Section */
+.info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 2px solid #ccc;
+}
+.about-block {
+    padding: 40px;
+    border-right: 2px solid #ccc;
+}
+.about-block h3 {
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+.map-block {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+.map-placeholder {
+    width: 100%;
+    height: 150px;
+    border: 2px dashed #bbb;
+    background: radial-gradient(circle, #eee 10%, transparent 11%), radial-gradient(circle, #eee 10%, transparent 11%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.map-pin {
+    font-size: 2rem;
+}
+
+/* Contact Us Section */
+.contact-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+.contact-section h3 {
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.form-input {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border: 2px solid #aaa;
+    outline: none;
+}
+.btn-send {
+    padding: 8px 20px;
+    border: 2px solid #333;
+    background: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-send:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Styling for Mobile Screens */
+@media (max-width: 768px) {
+    .features-section, .info-section {
+        grid-template-columns: 1fr;
+    }
+    .feature-left {
+        border-right: none;
+        border-bottom: 2px solid #ccc;
+    }
+    .about-block {
+        border-right: none;
+        border-bottom: 2px solid #ccc;
+    }
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

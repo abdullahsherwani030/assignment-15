@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="logo">LOGO</div>
+        <nav class="nav">
+            <a href="#about">ABOUT</a>
+            <a href="#services">SERVICES</a>
+            <a href="#contact">CONTACT</a>
+            <a href="#contact" class="btn-contact">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="hero-headline">HEADLINE</h1>
+        <p class="hero-subtext">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+        <button class="btn-primary">GET STARTED</button>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services" class="services-section">
+        <h2 class="section-title">OUR SERVICES</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="placeholder-box"></div>
+                <div class="line short-line"></div>
+                <div class="line long-line"></div>
+            </div>
+            <div class="service-card">
+                <div class="placeholder-box"></div>
+                <div class="line short-line"></div>
+                <div class="line long-line"></div>
+            </div>
+            <div class="service-card">
+                <div class="placeholder-box"></div>
+                <div class="line short-line"></div>
+                <div class="line long-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Split Content Section -->
+    <section class="features-section">
+        <div class="feature-left">
+            <div class="placeholder-box small-box"></div>
+            <div class="feature-text-block">
+                <div class="line long-line"></div>
+                <div class="line short-line"></div>
+            </div>
+        </div>
+        <div class="feature-right">
+            <div class="feature-text-block">
+                <div class="line long-line"></div>
+                <div class="line short-line"></div>
+            </div>
+            <div class="placeholder-box mini-box"></div>
+        </div>
+    </section>
+
+    <!-- About & Map Section -->
+    <section id="about" class="info-section">
+        <div class="about-block">
+            <h3>ABOUT US</h3>
+            <div class="line long-line"></div>
+            <div class="line short-line"></div>
+        </div>
+        <div class="map-block">
+            <!-- Simulated Map Component -->
+            <div class="map-placeholder">
+                <div class="map-pin">📍</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <footer id="contact" class="contact-section">
+        <h3>CONTACT US</h3>
+        <form class="contact-form" onsubmit="event.preventDefault();">
+            <input type="text" placeholder="Your message..." class="form-input">
+            <button type="submit" class="btn-send">SEND</button>
+        </form>
+    </footer>
+
+</body>
+</html>
